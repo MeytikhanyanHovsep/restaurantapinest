@@ -9,6 +9,7 @@ async function bootstrap() {
     credentials: true,
   });
 
-  await app.listen(3000);
+  await app.init();
+  return app.getHttpAdapter().getInstance();
 }
 bootstrap();
