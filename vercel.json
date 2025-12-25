@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "api/*.ts": {
+      "runtime": "nodejs24.x"
+    }
+  },
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/serverless.ts" }
+  ]
+}
