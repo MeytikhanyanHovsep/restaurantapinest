@@ -3,7 +3,14 @@ import { CreateProductDto } from './dto/create-product.dto';
 import { readFileSync } from 'fs';
 import Fuse from 'fuse.js';
 
-const data = JSON.parse(readFileSync('./src/data.json', 'utf8'));
+import * as path from 'path';
+import * as fs from 'fs';
+
+const jsonPath = path.join(process.cwd(), 'dist', 'data.json');
+
+// Read and parse
+const rawData = fs.readFileSync(jsonPath, 'utf8');
+const data = JSON.parse(rawData);
 
 @Injectable()
 export class ProductsService {
