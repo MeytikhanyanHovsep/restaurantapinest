@@ -2,15 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { CreateProductDto } from './dto/create-product.dto';
 import { readFileSync } from 'fs';
 import Fuse from 'fuse.js';
-
-import * as path from 'path';
-import * as fs from 'fs';
-
-const jsonPath = path.join(process.cwd(), 'dist', 'data.json');
-
-// Read and parse
-const rawData = fs.readFileSync(jsonPath, 'utf8');
-const data = JSON.parse(rawData);
+import data from '../data';
 
 @Injectable()
 export class ProductsService {

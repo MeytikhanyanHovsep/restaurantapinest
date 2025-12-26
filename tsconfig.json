@@ -17,6 +17,8 @@
     "strictBindCallApply": false,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false
+    "noFallthroughCasesInSwitch": false,
+    "resolveJsonModule": true,    // <--- This allows importing .json files
+    "moduleResolution": "node",   // <
   }
 }
